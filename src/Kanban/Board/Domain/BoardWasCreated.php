@@ -11,18 +11,20 @@ final class BoardWasCreated extends DomainEvent
     public function __construct(
         private string $id,
         private string $name,
-        string $eventId = null,
-        string $occurredOn = null
-    ) {
+        string         $eventId = null,
+        string         $occurredOn = null
+    )
+    {
         parent::__construct($id, $eventId, $occurredOn);
     }
 
     public static function fromPrimitives(
         string $aggregateId,
-        array $body,
+        array  $body,
         string $eventId,
         string $occurredOn
-    ): DomainEvent {
+    ): DomainEvent
+    {
         return new self($aggregateId, $body['name'], $eventId, $occurredOn);
     }
 

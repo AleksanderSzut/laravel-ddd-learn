@@ -15,9 +15,10 @@ final class BoardMother
      * @throws Exception
      */
     public static function create(
-        ?BoardId $id = null,
+        ?BoardId   $id = null,
         ?BoardName $name = null
-    ): Board {
+    ): Board
+    {
         return Board::fromPrimitives(
             $id?->value() ?? BoardIdMother::create()->value(),
             $name?->value() ?? BoardNameMother::create()->value()

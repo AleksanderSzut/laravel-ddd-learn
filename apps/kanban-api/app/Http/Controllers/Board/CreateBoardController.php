@@ -14,9 +14,10 @@ use Illuminate\Http\Response;
 final class CreateBoardController
 {
     public function __construct(
-        private CommandBus $commandBus,
+        private CommandBus    $commandBus,
         private UuidGenerator $uuidGenerator
-    ) {
+    )
+    {
     }
 
     public function __invoke(Request $request): JsonResponse

@@ -13,16 +13,6 @@ final class CreateBoardCommandHandlerTest extends BoardModuleUnitTestCase
 {
     private CreateBoardCommandHandler $handler;
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->handler = new CreateBoardCommandHandler(
-            $this->repository(),
-            $this->eventBus()
-        );
-    }
-
     public function testItShouldCreateABoard(): void
     {
         $board = BoardMother::create();
@@ -51,5 +41,15 @@ final class CreateBoardCommandHandlerTest extends BoardModuleUnitTestCase
         $this->shouldNotSave($board);
 
         $this->dispatch($command, $this->handler);
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->handler = new CreateBoardCommandHandler(
+            $this->repository(),
+            $this->eventBus()
+        );
     }
 }

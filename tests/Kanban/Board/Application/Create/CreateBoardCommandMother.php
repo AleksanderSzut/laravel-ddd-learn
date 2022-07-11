@@ -12,9 +12,10 @@ use Tests\Kanban\Board\Domain\BoardMother;
 final class CreateBoardCommandMother
 {
     public static function create(
-        ?BoardId $id = null,
+        ?BoardId   $id = null,
         ?BoardName $name = null
-    ): CreateBoardCommand {
+    ): CreateBoardCommand
+    {
         $board = BoardMother::create($id, $name);
 
         return new CreateBoardCommand(

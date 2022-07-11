@@ -9,12 +9,13 @@ use App\Shared\Domain\Bus\Query\Query;
 final class SearchBoardsQuery implements Query
 {
     public function __construct(
-        private ?array $filters,
+        private ?array  $filters,
         private ?string $orderBy,
         private ?string $order,
-        private ?int $limit,
-        private ?int $offset
-    ) {
+        private ?int    $limit,
+        private ?int    $offset
+    )
+    {
     }
 
     public function filters(): ?array

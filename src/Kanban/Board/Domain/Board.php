@@ -9,9 +9,10 @@ use App\Shared\Domain\Aggregate\AggregateRoot;
 final class Board extends AggregateRoot
 {
     public function __construct(
-        private BoardId $id,
+        private BoardId   $id,
         private BoardName $name
-    ) {
+    )
+    {
     }
 
     public static function fromPrimitives(string $id, string $name): self

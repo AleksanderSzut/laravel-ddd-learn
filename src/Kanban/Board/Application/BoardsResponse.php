@@ -11,7 +11,7 @@ use App\Shared\Domain\Bus\Query\Response;
 final class BoardsResponse implements Response
 {
     /**
-     * @param  array<BoardResponse>  $boards
+     * @param array<BoardResponse> $boards
      */
     public function __construct(private array $boards)
     {

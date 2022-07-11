@@ -52,7 +52,7 @@ $app->singleton(
 |
 */
 
-$app->useEnvironmentPath(dirname(__DIR__.'/../../../../'));
+$app->useEnvironmentPath(dirname(__DIR__ . '/../../../../'));
 
 /*
 |--------------------------------------------------------------------------

@@ -18,7 +18,7 @@ final class DeleteBoardControllerTest extends TestCase
     {
         $board = BoardModel::factory()->create();
 
-        $response = $this->delete($this->baseUrl.'boards/'.$board->id);
+        $response = $this->delete($this->baseUrl . 'boards/' . $board->id);
 
         $response->assertStatus(204);
         $this->assertDatabaseMissing(

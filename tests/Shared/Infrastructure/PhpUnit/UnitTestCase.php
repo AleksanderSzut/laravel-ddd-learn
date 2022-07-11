@@ -41,11 +41,6 @@ abstract class UnitTestCase extends TestCase
         $this->prophet->checkPredictions();
     }
 
-    protected function prophecy(string $interface): ObjectProphecy
-    {
-        return $this->prophet->prophesize($interface);
-    }
-
     protected function notify(DomainEvent $event, callable $subscriber): void
     {
         $subscriber($event);
@@ -93,6 +88,11 @@ abstract class UnitTestCase extends TestCase
     protected function queryBusProphecy(): ObjectProphecy
     {
         return $this->queryBusProphecy = $this->queryBusProphecy ?? $this->prophecy(QueryBus::class);
+    }
+
+    protected function prophecy(string $interface): ObjectProphecy
+    {
+        return $this->prophet->prophesize($interface);
     }
 
     /**

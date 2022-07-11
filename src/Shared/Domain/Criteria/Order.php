@@ -7,9 +7,10 @@ namespace App\Shared\Domain\Criteria;
 final class Order
 {
     public function __construct(
-        private string $orderBy,
+        private string    $orderBy,
         private OrderType $type
-    ) {
+    )
+    {
     }
 
     public function orderBy(): string

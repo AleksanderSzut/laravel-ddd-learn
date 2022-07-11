@@ -18,7 +18,7 @@ final class GetBoardByIdControllerTest extends TestCase
     {
         $board = BoardModel::factory()->create();
 
-        $response = $this->get($this->baseUrl.'boards/'.$board->id);
+        $response = $this->get($this->baseUrl . 'boards/' . $board->id);
 
         $response
             ->assertJson(

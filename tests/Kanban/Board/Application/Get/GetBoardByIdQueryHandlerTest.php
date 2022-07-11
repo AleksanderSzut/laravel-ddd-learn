@@ -14,13 +14,6 @@ final class GetBoardByIdQueryHandlerTest extends BoardModuleUnitTestCase
 {
     private GetBoardByIdQueryHandler $handler;
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->handler = new GetBoardByIdQueryHandler($this->repository());
-    }
-
     public function testItShouldGetABoardById(): void
     {
         $board = BoardMother::create();
@@ -43,5 +36,12 @@ final class GetBoardByIdQueryHandlerTest extends BoardModuleUnitTestCase
         );
 
         $this->assertAskThrowsException(BoardNotFound::class, $query, $this->handler);
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->handler = new GetBoardByIdQueryHandler($this->repository());
     }
 }

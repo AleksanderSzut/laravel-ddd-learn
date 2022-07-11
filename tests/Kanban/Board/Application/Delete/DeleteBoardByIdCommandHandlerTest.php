@@ -13,13 +13,6 @@ final class DeleteBoardByIdCommandHandlerTest extends BoardModuleUnitTestCase
 {
     private DeleteBoardByIdCommandHandler $handler;
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->handler = new DeleteBoardByIdCommandHandler($this->repository());
-    }
-
     public function testItShouldDeleteABoard(): void
     {
         $board = BoardMother::create();
@@ -45,5 +38,12 @@ final class DeleteBoardByIdCommandHandlerTest extends BoardModuleUnitTestCase
         );
 
         $this->dispatch($command, $this->handler);
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->handler = new DeleteBoardByIdCommandHandler($this->repository());
     }
 }

@@ -38,6 +38,7 @@
 ## Installation
 
 ### Requirements
+
 - [Install Docker](https://www.docker.com/get-started)
 - [Install Docker Compose](https://docs.docker.com/compose/install/)
 
@@ -57,7 +58,6 @@ and run containers:
 
 `composer up`
 
-    
 Then you'll have 2 apps available (1 API and 1 Frontend):
 
 1. Kanban API: http://localhost:8080/api/v1/kanban/health-check
@@ -81,9 +81,10 @@ Here are our implementations of the code we have in our base (src). Here can be 
 
 #### src
 
-`src` is for "Source". Here we put all our code base being as independent as possible of any implementation (except is there is in `infrastructure` subfolder).
+`src` is for "Source". Here we put all our code base being as independent as possible of any implementation (except is
+there is in `infrastructure` subfolder).
 
-The main idea is to use this as our **pure** code, with no vendor 
+The main idea is to use this as our **pure** code, with no vendor
 
 ### Bounded contexts
 
@@ -91,7 +92,8 @@ Kanban: Place where the main functionality is implemented. Management of boards,
 
 ### Architecture and Structure
 
-This repository follows the Hexagonal Architecture pattern. Also, it's structured using modules. With this, we can see that the current structure:
+This repository follows the Hexagonal Architecture pattern. Also, it's structured using modules. With this, we can see
+that the current structure:
 
 *Kanban bounded context* containing *Board module* and *Shared bonded context*.
 
@@ -116,7 +118,8 @@ src
 
 Repository pattern
 
-Our repositories try to be as simple as possible usually only containing basic CRUD methods (delete, find, save and list).
+Our repositories try to be as simple as possible usually only containing basic CRUD methods (delete, find, save and
+list).
 
 #### CQRS
 

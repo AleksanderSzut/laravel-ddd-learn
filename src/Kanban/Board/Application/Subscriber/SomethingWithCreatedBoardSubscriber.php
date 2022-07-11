@@ -9,15 +9,15 @@ use App\Shared\Domain\Bus\Event\DomainEventSubscriber;
 
 class SomethingWithCreatedBoardSubscriber implements DomainEventSubscriber
 {
-    public function __invoke(BoardWasCreated $event): void
-    {
-        // TODO add here some logic
-    }
-
     public static function subscribedTo(): array
     {
         return [
             BoardWasCreated::class,
         ];
+    }
+
+    public function __invoke(BoardWasCreated $event): void
+    {
+        // TODO add here some logic
     }
 }

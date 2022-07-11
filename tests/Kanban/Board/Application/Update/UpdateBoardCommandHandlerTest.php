@@ -13,13 +13,6 @@ final class UpdateBoardCommandHandlerTest extends BoardModuleUnitTestCase
 {
     private UpdateBoardCommandHandler $handler;
 
-    protected function setUp(): void
-    {
-        parent::setUp();
-
-        $this->handler = new UpdateBoardCommandHandler($this->repository());
-    }
-
     public function testItShouldUpdateABoard(): void
     {
         $board = BoardMother::create();
@@ -51,5 +44,12 @@ final class UpdateBoardCommandHandlerTest extends BoardModuleUnitTestCase
         );
 
         $this->dispatch($command, $this->handler);
+    }
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $this->handler = new UpdateBoardCommandHandler($this->repository());
     }
 }

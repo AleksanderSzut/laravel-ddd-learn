@@ -16,14 +16,14 @@ abstract class BoardModuleUnitTestCase extends UnitTestCase
 
     private $repositoryProphecy;
 
-    protected function shouldFindById(BoardId $id, Board $board): void
-    {
-        $this->repositoryProphecy()->find($id)->willReturn($board);
-    }
-
     protected function shouldNotFindById(BoardId $id): void
     {
         $this->repositoryProphecy()->find($id)->willReturn(null);
+    }
+
+    private function repositoryProphecy(): ObjectProphecy
+    {
+        return $this->repositoryProphecy = $this->repositoryProphecy ?? $this->prophecy(BoardRepository::class);
     }
 
     protected function shouldSave(Board $board): void
@@ -39,6 +39,11 @@ abstract class BoardModuleUnitTestCase extends UnitTestCase
         );
     }
 
+    protected function shouldFindById(BoardId $id, Board $board): void
+    {
+        $this->repositoryProphecy()->find($id)->willReturn($board);
+    }
+
     protected function shouldDelete(BoardId $id): void
     {
         $this->repositoryProphecy()->delete($id);
@@ -47,10 +52,5 @@ abstract class BoardModuleUnitTestCase extends UnitTestCase
     protected function repository()
     {
         return $this->repository = $this->repository ?? $this->repositoryProphecy()->reveal();
-    }
-
-    private function repositoryProphecy(): ObjectProphecy
-    {
-        return $this->repositoryProphecy = $this->repositoryProphecy ?? $this->prophecy(BoardRepository::class);
     }
 }

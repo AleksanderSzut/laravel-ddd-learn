@@ -18,7 +18,7 @@ final class SearchBoardsController
     }
 
     /**
-     * @param  Request  $request
+     * @param Request $request
      * @return JsonResponse
      *
      * example url: v1/kanban/boards?filters=created_at>=2022-01-01&order_by=name&order=desc&limit=5&offset=1

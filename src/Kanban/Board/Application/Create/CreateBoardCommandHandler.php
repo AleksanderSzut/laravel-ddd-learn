@@ -16,8 +16,9 @@ final class CreateBoardCommandHandler implements CommandHandler
 {
     public function __construct(
         private BoardRepository $repository,
-        private EventBus $eventBus
-    ) {
+        private EventBus        $eventBus
+    )
+    {
     }
 
     public function __invoke(CreateBoardCommand $command): void

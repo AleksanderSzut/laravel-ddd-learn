@@ -19,7 +19,7 @@ final class CreateBoardControllerTest extends TestCase
         $name = Factory::create()->randomElement(['Board test 1', 'Board test 2']);
 
         $response = $this->post(
-            $this->baseUrl.'boards',
+            $this->baseUrl . 'boards',
             [
                 'name' => $name,
             ]
