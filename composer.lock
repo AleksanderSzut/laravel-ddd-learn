@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c9423ee56b627ded202efc9b9a004989",
+    "content-hash": "4954344ebaf6dd93f939e2a387616ecb",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6138,6 +6138,54 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "amphibee/laravel-pint-pre-commit",
+            "version": "1.0.53",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AmphiBee/laravel-pint-pre-commit.git",
+                "reference": "30adbd888958666fe875c8419e64bf948323be07"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AmphiBee/laravel-pint-pre-commit/zipball/30adbd888958666fe875c8419e64bf948323be07",
+                "reference": "30adbd888958666fe875c8419e64bf948323be07",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/pint": "^0.2.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "AmphiBee\\LaravelPintPreCommit\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AmphiBee\\LaravelPintPreCommit\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Laravel Pint pre-commit hook allow you to analyse your code with the awesome Laravel Pint.",
+            "homepage": "https://github.com/AmphiBee/laravel-pint-pre-commit",
+            "keywords": [
+                "HOOK",
+                "Pint",
+                "git",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/AmphiBee/laravel-pint-pre-commit/issues",
+                "source": "https://github.com/AmphiBee/laravel-pint-pre-commit"
+            },
+            "time": "2022-06-28T11:58:39+00:00"
+        },
         {
             "name": "doctrine/instantiator",
             "version": "1.4.1",

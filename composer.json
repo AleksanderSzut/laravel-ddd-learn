@@ -23,6 +23,7 @@
         "symfony/messenger": "^5.0"
     },
     "require-dev": {
+        "amphibee/laravel-pint-pre-commit": "^1.0",
         "laravel/pint": "^0.2.3",
         "phpunit/phpunit": "^9.0",
         "roave/security-advisories": "dev-latest"

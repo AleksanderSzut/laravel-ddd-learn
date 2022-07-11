@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Apps\KanbanApi\Http\Controllers\Board;
 
 use App\Kanban\Board\Application\BoardsResponse;
