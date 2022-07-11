@@ -44,7 +44,7 @@ class Handler extends ExceptionHandler
     public function render($request, Throwable $e)
     {
         // TODO
-        if (app()->environment() === 'testing') {
+        if ('testing' === app()->environment()) {
             return;
         }
         // return parent::render($request, $e);

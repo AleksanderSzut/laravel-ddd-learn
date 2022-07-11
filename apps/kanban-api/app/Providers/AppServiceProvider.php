@@ -25,23 +25,17 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(
             EventBus::class,
-            function ($app) {
-                return new MessengerEventBus($app->tagged('domain_event_subscriber'));
-            }
+            fn ($app) => new MessengerEventBus($app->tagged('domain_event_subscriber'))
         );
 
         $this->app->bind(
             QueryBus::class,
-            function ($app) {
-                return new MessengerQueryBus($app->tagged('query_handler'));
-            }
+            fn ($app) => new MessengerQueryBus($app->tagged('query_handler'))
         );
 
         $this->app->bind(
             CommandBus::class,
-            function ($app) {
-                return new MessengerCommandBus($app->tagged('command_handler'));
-            }
+            fn ($app) => new MessengerCommandBus($app->tagged('command_handler'))
         );
 
         $this->app->bind(

@@ -20,9 +20,7 @@ final class BoardsResponse implements Response
     public static function fromBoards(Boards $boards): self
     {
         $boardResponses = array_map(
-            function (Board $board) {
-                return BoardResponse::fromBoard($board);
-            },
+            fn (Board $board) => BoardResponse::fromBoard($board),
             $boards->all()
         );
 
@@ -31,8 +29,6 @@ final class BoardsResponse implements Response
 
     public function toArray(): array
     {
-        return array_map(function (BoardResponse $boardResponse) {
-            return $boardResponse->toArray();
-        }, $this->boards);
+        return array_map(fn (BoardResponse $boardResponse) => $boardResponse->toArray(), $this->boards);
     }
 }

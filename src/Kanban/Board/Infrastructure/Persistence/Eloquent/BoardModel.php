@@ -23,7 +23,7 @@ final class BoardModel extends Model
 
     public function __construct(array $attributes = [])
     {
-        if (app()->environment() === 'testing') {
+        if ('testing' === app()->environment()) {
             $this->setConnection('sqlite');
         } else {
             $this->setConnection('mysql');

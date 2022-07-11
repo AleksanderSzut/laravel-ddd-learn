@@ -69,6 +69,6 @@ final class CallableFirstParameterExtractor
 
     private function hasOnlyOneParameter(ReflectionMethod $method): bool
     {
-        return $method->getNumberOfParameters() === 1;
+        return 1 === $method->getNumberOfParameters();
     }
 }

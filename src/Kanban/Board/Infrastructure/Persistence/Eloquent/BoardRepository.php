@@ -90,9 +90,7 @@ final class BoardRepository implements BoardRepositoryInterface
         $eloquentBoards = $this->model->all();
 
         $boards = $eloquentBoards->map(
-            function (BoardModel $eloquentBoard) {
-                return $this->toDomain($eloquentBoard);
-            }
+            fn (BoardModel $eloquentBoard) => $this->toDomain($eloquentBoard)
         )->toArray();
 
         return new Boards($boards);
