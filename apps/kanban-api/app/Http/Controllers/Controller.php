@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Apps\KanbanApi\Http\Controllers;
 
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;

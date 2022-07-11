@@ -24,7 +24,7 @@ final class DeleteBoardByIdCommandHandler implements CommandHandler
         $board = $this->repository->find($id);
 
         if (null === $board) {
-            throw new BoardNotFound();
+            throw new BoardNotFound;
         }
 
         $this->repository->delete($id);

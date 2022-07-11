@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Apps\KanbanApi\Providers;
 
 use App\Shared\Domain\Bus\Command\CommandBus;

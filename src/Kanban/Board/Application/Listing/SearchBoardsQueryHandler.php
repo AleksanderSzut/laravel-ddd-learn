@@ -20,8 +20,8 @@ final class SearchBoardsQueryHandler implements QueryHandler
     public function __invoke(SearchBoardsQuery $query): BoardsResponse
     {
         $criteria = new Criteria(
-            new Filters(),
-            new Order(),
+            new Filters,
+            new Order,
             $query->offset(),
             $query->limit()
         );

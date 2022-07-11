@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Apps\KanbanApi\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as Middleware;

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Apps\KanbanApi\Http\Controllers\Board\CreateBoardController;
 use Apps\KanbanApi\Http\Controllers\Board\DeleteBoardController;
 use Apps\KanbanApi\Http\Controllers\Board\GetBoardByIdController;

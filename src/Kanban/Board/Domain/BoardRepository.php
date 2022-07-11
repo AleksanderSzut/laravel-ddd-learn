@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Kanban\Board\Domain;
 
 use App\Shared\Domain\Criteria\Criteria;

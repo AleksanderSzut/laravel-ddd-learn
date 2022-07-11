@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Apps\KanbanApi\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;

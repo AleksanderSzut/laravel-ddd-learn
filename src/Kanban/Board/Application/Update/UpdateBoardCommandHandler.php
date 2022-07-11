@@ -26,7 +26,7 @@ final class UpdateBoardCommandHandler implements CommandHandler
         $board = $this->repository->find($id);
 
         if (null === $board) {
-            throw new BoardNotFound();
+            throw new BoardNotFound;
         }
 
         $name = BoardName::fromValue($command->name());

@@ -19,7 +19,7 @@ abstract class DomainEvent
     {
         $this->aggregateId = $aggregateId;
         $this->eventId = $eventId ?: UuidValueObject::random()->value();
-        $this->occurredOn = $occurredOn ?: (new DateTimeImmutable())->format('Y-m-d H:i:s.u T');
+        $this->occurredOn = $occurredOn ?: (new DateTimeImmutable)->format('Y-m-d H:i:s.u T');
     }
 
     abstract public static function fromPrimitives(

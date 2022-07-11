@@ -26,7 +26,7 @@ final class CreateBoardCommandHandler implements CommandHandler
         $board = $this->repository->find($id);
 
         if (null !== $board) {
-            throw new BoardAlreadyExists();
+            throw new BoardAlreadyExists;
         }
 
         $name = BoardName::fromValue($command->name());

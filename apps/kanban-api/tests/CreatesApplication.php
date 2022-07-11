@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Apps\KanbanApi\Tests;
 
 use Illuminate\Contracts\Console\Kernel;

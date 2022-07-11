@@ -25,7 +25,7 @@ final class GetBoardByIdQueryHandler implements QueryHandler
         $board = $this->repository->find($id);
 
         if (null === $board) {
-            throw new BoardNotFound();
+            throw new BoardNotFound;
         }
 
         return BoardResponse::fromBoard($board);

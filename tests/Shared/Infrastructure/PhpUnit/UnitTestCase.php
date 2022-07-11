@@ -33,7 +33,7 @@ abstract class UnitTestCase extends TestCase
 
     protected function setUp(): void
     {
-        $this->prophet = new Prophet();
+        $this->prophet = new Prophet;
     }
 
     protected function tearDown(): void

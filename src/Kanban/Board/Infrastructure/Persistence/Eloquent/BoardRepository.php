@@ -31,7 +31,7 @@ final class BoardRepository implements BoardRepositoryInterface
         $board = $this->model->find($id->value());
 
         if (null === $board) {
-            throw new BoardAlreadyExists();
+            throw new BoardAlreadyExists;
         }
 
         $board->delete();

@@ -16,7 +16,7 @@ final class CallableFirstParameterExtractor
 {
     public static function forCallables(iterable $callables): array
     {
-        return map(self::unflatten(), reindex(self::classExtractor(new self()), $callables));
+        return map(self::unflatten(), reindex(self::classExtractor(new self), $callables));
     }
 
     public static function forPipedCallables(iterable $callables): array
