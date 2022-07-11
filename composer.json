@@ -1,61 +1,64 @@
 {
-  "name": "mguinea/laravel-ddd-example",
-  "type": "project",
-  "description": "An example project applying Domain-Driven Design, Hexagonal Architecture and CQRS in a Laravel Monorepository",
-  "keywords": [
-    "ddd",
-    "laravel",
-    "cqrs",
-    "solid",
-    "best-practices"
-  ],
-  "license": "MIT",
-  "require": {
-    "php": "^8.1",
-    "ext-json": "*",
-    "ext-pdo": "*",
-    "aws/aws-sdk-php": "^3.211",
-    "fideloper/proxy": "^4.4",
-    "fruitcake/laravel-cors": "^2.0",
-    "guzzlehttp/guzzle": "^7.0.1",
-    "lambdish/phunctional": "^2.1",
-    "laravel/framework": "^8.0",
-    "symfony/messenger": "^5.0"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^9.0"
-  },
-  "config": {
-    "optimize-autoloader": true,
-    "preferred-install": "dist",
-    "sort-packages": true
-  },
-  "extra": {
-    "laravel": {
-      "dont-discover": []
+    "name": "mguinea/laravel-ddd-example",
+    "type": "project",
+    "description": "An example project applying Domain-Driven Design, Hexagonal Architecture and CQRS in a Laravel Monorepository",
+    "keywords": [
+        "ddd",
+        "laravel",
+        "cqrs",
+        "solid",
+        "best-practices"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "ext-pdo": "*",
+        "aws/aws-sdk-php": "^3.211",
+        "fideloper/proxy": "^4.4",
+        "fruitcake/laravel-cors": "^2.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "lambdish/phunctional": "^2.1",
+        "laravel/framework": "^8.0",
+        "symfony/messenger": "^5.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^0.2.3",
+        "phpunit/phpunit": "^9.0",
+        "roave/security-advisories": "dev-latest"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Apps\\KanbanApi\\": "apps/kanban-api/app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/",
+            "Apps\\KanbanApi\\Tests\\": "apps/kanban-api/tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "bash": "scripts/bash.sh",
+        "build": "scripts/build.sh",
+        "coverage": "scripts/coverage.sh",
+        "destroy": "scripts/destroy.sh",
+        "migrate": "scripts/migrate.sh",
+        "tests": "scripts/tests.sh",
+        "up": "scripts/up.sh",
+        "lint": "./vendor/bin/pint -v"
     }
-  },
-  "autoload": {
-    "psr-4": {
-      "App\\": "src/",
-      "Apps\\KanbanApi\\": "apps/kanban-api/app/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\": "tests/",
-      "Apps\\KanbanApi\\Tests\\": "apps/kanban-api/tests/"
-    }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "scripts": {
-    "bash": "scripts/bash.sh",
-    "build": "scripts/build.sh",
-    "coverage": "scripts/coverage.sh",
-    "destroy": "scripts/destroy.sh",
-    "migrate": "scripts/migrate.sh",
-    "tests": "scripts/tests.sh",
-    "up": "scripts/up.sh"
-  }
 }
