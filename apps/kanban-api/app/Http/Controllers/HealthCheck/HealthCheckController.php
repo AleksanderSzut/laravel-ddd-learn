@@ -13,7 +13,7 @@ final class HealthCheckController
     {
         return new JsonResponse(
             [
-                'kanban-api-status' => 'ok'
+                'kanban-api-status' => 'ok',
             ],
             Response::HTTP_OK,
             ['Access-Control-Allow-Origin' => '*']

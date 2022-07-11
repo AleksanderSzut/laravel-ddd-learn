@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace App\Kanban\Board\Infrastructure\Persistence\Eloquent;
 
 use App\Kanban\Board\Domain\Board;
-use App\Kanban\Board\Domain\BoardId;
 use App\Kanban\Board\Domain\BoardAlreadyExists;
+use App\Kanban\Board\Domain\BoardId;
 use App\Kanban\Board\Domain\BoardRepository as BoardRepositoryInterface;
 use App\Kanban\Board\Domain\Boards;
 use App\Shared\Domain\Criteria\Criteria;

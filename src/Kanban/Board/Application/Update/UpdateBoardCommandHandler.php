@@ -7,7 +7,6 @@ namespace App\Kanban\Board\Application\Update;
 use App\Kanban\Board\Domain\Board;
 use App\Kanban\Board\Domain\BoardId;
 use App\Kanban\Board\Domain\BoardName;
-use App\Kanban\Board\Domain\BoardAlreadyExists;
 use App\Kanban\Board\Domain\BoardNotFound;
 use App\Kanban\Board\Domain\BoardRepository;
 use App\Shared\Domain\Bus\Command\CommandHandler;

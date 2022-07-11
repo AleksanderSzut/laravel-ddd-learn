@@ -12,9 +12,13 @@ final class BoardModel extends Model
     use HasFactory;
 
     protected $keyType = 'string';
+
     protected $primaryKey = 'id';
+
     protected $table = 'boards';
+
     public $incrementing = false;
+
     public $timestamps = false;
 
     public function __construct(array $attributes = [])

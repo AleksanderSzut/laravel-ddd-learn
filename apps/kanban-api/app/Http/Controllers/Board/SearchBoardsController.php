@@ -18,18 +18,17 @@ final class SearchBoardsController
     }
 
     /**
-     * @param Request $request
+     * @param  Request  $request
      * @return JsonResponse
      *
      * example url: v1/kanban/boards?filters=created_at>=2022-01-01&order_by=name&order=desc&limit=5&offset=1
-     *
      */
     public function __invoke(Request $request): JsonResponse
     {
         $filters = $request->get('filters');
         $orderBy = $request->get('order_by');
         $order = $request->get('order');
-        $limit  = $request->get('limit');
+        $limit = $request->get('limit');
         $offset = $request->get('offset');
 
         /** @var BoardsResponse $boardsResponse */
@@ -45,7 +44,7 @@ final class SearchBoardsController
 
         return new JsonResponse(
             [
-                'boards' => $boardsResponse->toArray()
+                'boards' => $boardsResponse->toArray(),
             ],
             Response::HTTP_OK,
             ['Access-Control-Allow-Origin' => '*']

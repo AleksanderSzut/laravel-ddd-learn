@@ -13,6 +13,7 @@ use Tests\Shared\Infrastructure\PhpUnit\UnitTestCase;
 abstract class BoardModuleUnitTestCase extends UnitTestCase
 {
     private $repository;
+
     private $repositoryProphecy;
 
     protected function shouldFindById(BoardId $id, Board $board): void

@@ -8,5 +8,4 @@ use Illuminate\Foundation\Testing\TestCase;
 
 abstract class BoardModuleInfrastructureTestCase extends TestCase
 {
-
 }

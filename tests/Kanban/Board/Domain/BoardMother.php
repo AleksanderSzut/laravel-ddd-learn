@@ -17,8 +17,7 @@ final class BoardMother
     public static function create(
         ?BoardId $id = null,
         ?BoardName $name = null
-    ): Board
-    {
+    ): Board {
         return Board::fromPrimitives(
             $id?->value() ?? BoardIdMother::create()->value(),
             $name?->value() ?? BoardNameMother::create()->value()

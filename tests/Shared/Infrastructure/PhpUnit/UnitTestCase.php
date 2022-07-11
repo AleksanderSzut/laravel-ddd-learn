@@ -18,11 +18,17 @@ use Prophecy\Prophet;
 abstract class UnitTestCase extends TestCase
 {
     protected Prophet $prophet;
+
     private $queryBusProphecy;
+
     private QueryBus $queryBus;
+
     private $commandBusProphecy;
+
     private CommandBus $commandBus;
+
     private $eventBusProphecy;
+
     private EventBus $eventBus;
 
     protected function setUp(): void

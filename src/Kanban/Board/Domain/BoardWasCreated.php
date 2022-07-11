@@ -35,7 +35,7 @@ final class BoardWasCreated extends DomainEvent
     {
         return [
             'id' => $this->id,
-            'name' => $this->name
+            'name' => $this->name,
         ];
     }
 

@@ -9,9 +9,9 @@ use Throwable;
 
 final class BoardNotFound extends DomainException
 {
-    public function __construct($message = "", $code = 0, Throwable $previous = null)
+    public function __construct($message = '', $code = 0, Throwable $previous = null)
     {
-        $message = "" === $message ? "Board not found" : $message;
+        $message = '' === $message ? 'Board not found' : $message;
 
         parent::__construct($message, $code, $previous);
     }

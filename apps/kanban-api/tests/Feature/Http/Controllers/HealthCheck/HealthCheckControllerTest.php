@@ -10,7 +10,7 @@ final class HealthCheckControllerTest extends TestCase
 {
     public function testHealthCheck()
     {
-        $response = $this->get($this->baseUrl . 'health-check');
+        $response = $this->get($this->baseUrl.'health-check');
 
         $response->assertStatus(200);
     }

@@ -6,7 +6,6 @@ namespace Tests\Kanban\Board\Domain;
 
 use App\Kanban\Board\Domain\BoardName;
 use Exception;
-
 use function random_int;
 
 final class BoardNameMother

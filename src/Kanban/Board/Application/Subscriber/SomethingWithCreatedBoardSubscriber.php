@@ -17,7 +17,7 @@ class SomethingWithCreatedBoardSubscriber implements DomainEventSubscriber
     public static function subscribedTo(): array
     {
         return [
-            BoardWasCreated::class
+            BoardWasCreated::class,
         ];
     }
 }

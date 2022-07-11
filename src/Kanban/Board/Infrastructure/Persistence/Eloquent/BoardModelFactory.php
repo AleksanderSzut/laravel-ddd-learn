@@ -29,7 +29,7 @@ final class BoardModelFactory extends Factory
                     'Board A',
                     'Board B',
                     'Board C',
-                    'Board D'
+                    'Board D',
                 ]
             ),
         ];

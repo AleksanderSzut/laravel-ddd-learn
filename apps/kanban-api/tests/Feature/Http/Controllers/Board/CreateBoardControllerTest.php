@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Apps\KanbanApi\Tests\Feature\Http\Controllers\Board;
 
-use App\Kanban\Board\Infrastructure\Persistence\Eloquent\BoardModel;
 use Apps\KanbanApi\Tests\TestCase;
 use Faker\Factory;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -20,17 +19,17 @@ final class CreateBoardControllerTest extends TestCase
         $name = Factory::create()->randomElement(['Board test 1', 'Board test 2']);
 
         $response = $this->post(
-            $this->baseUrl . 'boards',
+            $this->baseUrl.'boards',
             [
-                'name' => $name
+                'name' => $name,
             ]
         );
 
         $response->assertJsonStructure(
             [
                 'board' => [
-                    'id'
-                ]
+                    'id',
+                ],
             ]
         )->assertStatus(200);
 

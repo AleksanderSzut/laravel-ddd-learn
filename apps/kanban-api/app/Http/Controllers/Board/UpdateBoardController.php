@@ -28,8 +28,8 @@ final class UpdateBoardController
         return new JsonResponse(
             [
                 'board' => [
-                    'id' => $id
-                ]
+                    'id' => $id,
+                ],
             ],
             Response::HTTP_OK,
             ['Access-Control-Allow-Origin' => '*']

@@ -35,7 +35,7 @@ final class BoardResponse implements Response
     {
         return [
             'id' => $this->id,
-            'name' => $this->name
+            'name' => $this->name,
         ];
     }
 }

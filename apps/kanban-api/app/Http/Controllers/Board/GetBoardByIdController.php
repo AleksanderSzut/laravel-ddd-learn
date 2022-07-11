@@ -26,7 +26,7 @@ final class GetBoardByIdController
 
         return new JsonResponse(
             [
-                'board' => $boardResponse->toArray()
+                'board' => $boardResponse->toArray(),
             ],
             Response::HTTP_OK,
             ['Access-Control-Allow-Origin' => '*']

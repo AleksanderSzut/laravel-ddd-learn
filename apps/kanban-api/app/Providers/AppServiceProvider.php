@@ -3,7 +3,6 @@
 namespace Apps\KanbanApi\Providers;
 
 use App\Shared\Domain\Bus\Command\CommandBus;
-use App\Shared\Domain\Bus\Event\DomainEventSubscriber;
 use App\Shared\Domain\Bus\Event\EventBus;
 use App\Shared\Domain\Bus\Query\QueryBus;
 use App\Shared\Domain\UuidGenerator;
@@ -56,6 +55,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadMigrationsFrom(__DIR__ . '/../../database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../../database/migrations');
     }
 }
