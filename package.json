@@ -4,7 +4,7 @@
     "private": true,
     "dependencies": {
         "core-js": "^3.9.1",
-        "nuxt": "^2.15.3",
+        "nuxt": "^3.0.0",
         "vuedraggable": "2.23.2"
     },
     "devDependencies": {
@@ -14,6 +14,6 @@
         "babel-jest": "^26.6.3",
         "jest": "^26.6.3",
         "postcss": "^8.2.8",
-        "vue-jest": "^3.0.4"
+        "vue-jest": "^4.0.1"
     }
 }
